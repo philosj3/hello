@@ -23,3 +23,23 @@ hello
 
 
 </html>
+
+ <!-- BEGIN SENTRY -->
+ <script src="https://browser.sentry-cdn.com/4.4.2/bundle.min.js" crossorigin="anonymous"></script>
+ <script type="text/javascript">
+   Sentry.init({
+     dsn: 'https://b0d320ce280a492696c6716fc0fd90dd@sentry.io/1366160',
+     release: "1.161.0",
+     environment: "production"
+   });
+
+   Sentry.configureScope((scope) => {
+     scope.setUser({
+       id: "null-user-id",
+       clientId: "93534c1c-0663-48b9-a28a-dd5bd2dc50d1",
+     });
+     scope.setExtra("sessionId", "138fb189-1c92-4b2a-aff0-d3bfffb0e2c4");
+   });
+
+ </script>
+ <!-- END SENTRY -->
